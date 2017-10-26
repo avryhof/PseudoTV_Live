@@ -1727,20 +1727,20 @@ def chkChanges():
 
 def preStart(): 
     log('utils: preStart')
-    if chkVersion() == False:
-        return False
+    # if chkVersion() == False:
+        # return False
         
-    chkLowPower()
-    chkAPIS(RSS_API())
-    if HEADLESS_SHARING == False:
-        # chkChanges()
-        patchSeekbar()
-        patchFont()
+    # chkLowPower()
+    # chkAPIS(RSS_API())
+    # if HEADLESS_SHARING == False:
+        # # chkChanges()
+        # patchSeekbar()
+        # patchFont()
 
-        # Disable long term debugging
-        if isDebug() == True:
-            if yesnoDialog('Its recommended you disable debug logging for standard use',header='PseudoTV Live - Disable Debugging?') == True:
-                REAL_SETTINGS.setSetting('enable_Debug', "false")
+        # # Disable long term debugging
+        # if isDebug() == True:
+            # if yesnoDialog('Its recommended you disable debug logging for standard use',header='PseudoTV Live - Disable Debugging?') == True:
+                # REAL_SETTINGS.setSetting('enable_Debug', "false")
         
     # Chk forcereset, clearcache & playlists
     if REAL_SETTINGS.getSetting("ForceChannelReset") == "true":

@@ -40,13 +40,11 @@ __language__   = __settings__.getLocalizedString
 def PseudoTV():
     try:
         import resources.lib.Overlay as Overlay         
-        if hasVersionChanged(__version__) == True: 
-            return HandleUpgrade()
-
+        # if hasVersionChanged(__version__) == True: 
+            # return HandleUpgrade()
         setProperty("PseudoTVRunning", "True")
-        while getProperty("PseudoTVService") == "True":
-            xbmc.sleep(25)
-            
+        # while getProperty("PseudoTVService") == "True":
+            # xbmc.sleep(25)
         if preStart() == True:
             MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.live.TVOverlay.xml", __cwd__, Skin_Select)
             
